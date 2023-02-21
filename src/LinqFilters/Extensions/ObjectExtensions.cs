@@ -8,10 +8,10 @@ internal static class ObjectExtensions
         => source
             .GetType()
             .GetProperties()
-            .Select(p => new FilterUnit { PropertyName = p.Name, Value = p.GetValue(source) });
+            .Select(p => p.GetFilterUnit(source));
 
     internal static bool CheckFiltrationByFilterUnit(this object source, FilterUnit filterUnit)
-        => source.GetPropertyValue(filterUnit.PropertyName) == filterUnit.Value;
+        => filterUnit.Filter.Filter(source.GetPropertyValue(filterUnit.PropertyName), filterUnit.Value);
 
     private static object? GetPropertyValue(this object source, string propertyName)
     {
