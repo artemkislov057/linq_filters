@@ -1,6 +1,6 @@
 ﻿using LinqFilters.Structs;
 
-namespace LinqFilters.Extensions;
+namespace LinqFilters.Extensions.Internal;
 
 internal static class ObjectExtensions
 {

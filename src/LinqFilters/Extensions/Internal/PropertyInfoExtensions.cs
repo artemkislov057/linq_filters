@@ -3,7 +3,7 @@ using LinqFilters.Attributes;
 using LinqFilters.Filters;
 using LinqFilters.Structs;
 
-namespace LinqFilters.Extensions;
+namespace LinqFilters.Extensions.Internal;
 
 internal static class PropertyInfoExtensions
 {

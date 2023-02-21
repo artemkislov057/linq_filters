@@ -1,4 +1,6 @@
-﻿namespace LinqFilters.Extensions;
+﻿using LinqFilters.Extensions.Internal;
+
+namespace LinqFilters.Extensions;
 
 public static class EnumerableExtensions
 {
