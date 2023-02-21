@@ -1,4 +1,4 @@
-﻿namespace LinqFilters.CLI;
+﻿namespace LinqFilters.CLI.Extensions;
 
 public static class EnumerableExtensions
 {

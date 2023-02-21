@@ -7,4 +7,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\LinqFilters\LinqFilters.csproj" />
+    </ItemGroup>
+
 </Project>

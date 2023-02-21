@@ -1,4 +1,9 @@
-﻿namespace LinqFilters.CLI;
+﻿using LinqFilters.CLI.Entities;
+using LinqFilters.CLI.Extensions;
+using LinqFilters.CLI.Filters;
+using LinqFilters.Extensions;
+
+namespace LinqFilters.CLI;
 
 public static class Program
 {
@@ -10,7 +15,8 @@ public static class Program
             new User("Artem", "Ivanov", 19)
         };
 
-        var result = users.Where(u => u.Surname == "Kislov").ToArray();
+        var userFilter = new UserFilter { Surname = "Kislov" };
+        var result = users.FilterBy(userFilter).ToArray();
         Console.WriteLine(result.GetDisplayMessage());
     }
 }

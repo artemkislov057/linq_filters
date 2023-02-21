@@ -1,4 +1,4 @@
-﻿namespace LinqFilters.CLI;
+﻿namespace LinqFilters.CLI.Entities;
 
 public sealed class User
 {
