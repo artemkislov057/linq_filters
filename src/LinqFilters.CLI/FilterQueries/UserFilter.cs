@@ -1,4 +1,4 @@
-﻿namespace LinqFilters.CLI.Filters;
+﻿namespace LinqFilters.CLI.FilterQueries;
 
 public sealed class UserFilter
 {

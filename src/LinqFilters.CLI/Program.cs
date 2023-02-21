@@ -1,6 +1,6 @@
 ﻿using LinqFilters.CLI.Entities;
 using LinqFilters.CLI.Extensions;
-using LinqFilters.CLI.Filters;
+using LinqFilters.CLI.FilterQueries;
 using LinqFilters.Extensions;
 
 namespace LinqFilters.CLI;
