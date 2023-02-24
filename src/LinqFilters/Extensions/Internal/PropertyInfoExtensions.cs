@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Linq.Expressions;
+using System.Reflection;
 using LinqFilters.Attributes;
 using LinqFilters.Filters;
 using LinqFilters.Structs;
@@ -15,9 +16,9 @@ internal static class PropertyInfoExtensions
             Filter = source.GetFilter()
         };
 
-    private static FilterBase GetFilter(this MemberInfo source)
+    private static Expression<Filter> GetFilter(this MemberInfo source)
     {
         var attribute = source.GetCustomAttributes().OfType<FilterLinqAttribute>().SingleOrDefault();
-        return attribute is null ? new FilterByEquals() : attribute.Filter;
+        return attribute is null ? DefaultFilters.FilterByEquals : attribute.Filter;
     }
 }

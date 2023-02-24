@@ -1,8 +1,9 @@
-﻿using LinqFilters.Filters;
+﻿using System.Linq.Expressions;
+using LinqFilters.Filters;
 
 namespace LinqFilters.Attributes;
 
 public abstract class FilterLinqAttribute : Attribute
 {
-    public abstract FilterBase Filter { get; }
+    public abstract Expression<Filter> Filter { get; }
 }

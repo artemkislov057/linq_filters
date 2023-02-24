@@ -6,5 +6,5 @@ public static class EnumerableExtensions
 {
     public static IEnumerable<T> FilterBy<T>(this IEnumerable<T> source, object filter) where T : notnull
         => filter.GetFilterUnits().Aggregate(source,
-            (current, filterUnit) => current.Where(e => e.CheckFiltrationByFilterUnit(filterUnit)));
+            (current, filterUnit) => current.Where(filterUnit.GenerateExpression<T>().Compile()));
 }
